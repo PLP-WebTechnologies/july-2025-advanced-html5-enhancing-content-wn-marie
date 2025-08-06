@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced HTML5 Elements & Form</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <header>
+        <h1>Enhanced HTML5 Content & Form</h1>
+        <p>Demonstrating lists, tables, media, and a fully functional HTML5 form with validation.</p>
+    </header>
+
+    <!-- Definition List -->
+    <section>
+        <h2>Definition List</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>A markup language for creating web pages.</dd>
+            <dt>CSS</dt>
+            <dd>A style sheet language used for designing web content.</dd>
+            <dt>JavaScript</dt>
+            <dd>A programming language for web interactivity.</dd>
+        </dl>
+    </section>
+
+    <!-- Nested Lists -->
+    <section>
+        <h2>Nested Lists</h2>
+        <ul>
+            <li>Devices
+                <ol type="a">
+                    <li>Laptop
+                        <ul>
+                            <li>HP</li>
+                            <li>Dell</li>
+                        </ul>
+                    </li>
+                    <li>Tablet</li>
+                    <li>Smartphone</li>
+                </ol>
+            </li>
+            <li>Accessories
+                <ul type="square">
+                    <li>Mouse</li>
+                    <li>Keyboard</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Images and Media -->
+    <section>
+        <h2>Media</h2>
+
+        <h3>Images</h3>
+        <img src="cake.jpg" alt="picture of a cake" width="300" height="200">
+        <img src="https://images.pexels.com/photos/804269/pexels-photo-804269.jpeg" alt="Picture of art" width="300" height="200">
+
+        <h3>Video</h3>
+        <video controls width="350" height="200">
+            <source src="Lake Naivasha.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="Bien - Chikwere.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Tables -->
+    <section>
+        <h2>Tables</h2>
+
+        <table border="1">
+            <caption>Course Enrollments</caption>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Enrolled</th>
+                    <th>Lecturer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML Basics</td>
+                    <td>50</td>
+                    <td>Mr. John</td>
+                </tr>
+                <tr>
+                    <td>CSS Advanced</td>
+                    <td>30</td>
+                    <td>Ms. Jane</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <table border="1">
+            <caption>Shift Schedule</caption>
+            <tr>
+                <th rowspan="2">Employee</th>
+                <th colspan="2">Shifts</th>
+            </tr>
+            <tr>
+                <td>Morning</td>
+                <td>Evening</td>
+            </tr>
+            <tr>
+                <td>Alex</td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sandra</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Forms -->
+    <section>
+        <h2>Registration Form</h2>
+
+        <form action="/submit-registration" method="post" autocomplete="on" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="e.g., Mary Wairimu" required autocomplete="name">
+
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">-- Select --</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="profile-pic">Upload Profile Picture:</label>
+                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Setup</legend>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9]{5,12}$" placeholder="5-12 alphanumeric characters">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" maxlength="20">
+
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" id="confirm" name="confirm" minlength="8" maxlength="20">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label>
+                    <input type="checkbox" name="updates" checked>
+                    Receive email updates
+                </label>
+                <br><br>
+
+                <label for="bio">Tell us about yourself:</label>
+                <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Write something..."></textarea>
+                
+            </fieldset>
+
+            <br>
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Created by Mary Wairimu.</p>
+    </footer>
+
+</body>
+</html>
